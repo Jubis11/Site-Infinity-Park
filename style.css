@@ -1,4 +1,5 @@
 /* --- 1. RESET PADRÃO (Zera as margens do navegador) --- */
+/* --- 1. RESET PADRÃO (Zera as margens do navegador) --- */
 * {
     margin: 0;
     padding: 0;
@@ -13,54 +14,69 @@ body {
     min-height: 100vh;
 }
 
-/* --- 3. BARRA VERMELHA (Menu Superior) --- */
+/* --- 3. BARRA VERMELHA AMPLIADA (Menu Superior) --- */
 header.barra-vermelha {
     background-color: #d10a10; /* O vermelho do Figma */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%; /* Alinhado com as laterais da tela */
+    padding: 35px 5%; /* Barra mais alta e robusta */
+    
+    /* Faz a barra jogar uma sombra por cima da imagem, dando o efeito de cobertura */
+    position: relative;
+    z-index: 10;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4); 
 }
 
+/* Logo do parque maior */
 header.barra-vermelha .logo h1 {
     font-family: "Spicy Rice", serif;
     color: #ffffff;
-    font-size: 28px;
+    font-size: 36px; 
     font-weight: 400;
 }
 
 header.barra-vermelha nav ul {
     display: flex;
     list-style: none;
-    gap: 25px; /* Espaço entre as opções do menu */
+    gap: 35px; /* Espaço confortável entre as opções do menu */
 }
 
+/* Links do menu maiores e destacados */
 header.barra-vermelha nav ul li a {
     color: #ffffff;
     text-decoration: none;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 18px; 
     text-transform: uppercase; /* Letras maiúsculas */
-    transition: color 0.2s;
+    transition: transform 0.2s, color 0.2s;
+    display: inline-block;
 }
 
+/* Efeito ao passar o mouse */
 header.barra-vermelha nav ul li a:hover {
-    color: #ffcccc; /* Cor ao passar o mouse */
+    color: #ffcccc; 
+    transform: scale(1.1); /* O link cresce um pouquinho */
 }
 
-/* --- 4. IMAGEM PRINCIPAL (Banner) --- */
+/* --- 4. IMAGEM PRINCIPAL (Banner Controlado) --- */
 .banner-atracao {
     width: 100%;
+    max-height: 500px; /* Evita que a foto ocupe a tela inteira no PC */
+    overflow: hidden;   /* Esconde o excesso da imagem se houver */
 }
 
 .img-principal {
     width: 100%;
-    display: block; /* Remove espaços vazios abaixo da foto */
+    height: 100%;
+    object-fit: cover; /* Encaixa a foto perfeitamente sem amassar */
+    object-position: center; /* Foca no meio da foto */
+    display: block; 
 }
 
 /* --- 5. SEÇÃO DE DESCRIÇÃO (Sobre o Parque) --- */
 .descricao-parque {
-    max-width: 1000px; /* Limita a largura do texto para não ficar esticado em telas gigantes */
+    max-width: 1000px; /* Limita a largura do texto para não ficar esticado */
     margin: 0 auto; /* Centraliza o bloco de texto na tela */
     padding: 60px 40px; /* Dá espaço para respirar nas bordas */
     text-align: center; /* Centraliza os textos igual ao Figma */
@@ -82,12 +98,12 @@ header.barra-vermelha nav ul li a:hover {
 }
 
 /* --- 6. SEGUNDA BARRA VERMELHA DE DIVISÃO --- */
-/* Como tiramos as laterais, agora criamos uma barra vermelha de verdade para o final da seção */
+/* Faixa vermelha horizontal atravessando a tela logo após o texto */
 main::after {
     content: "";
     display: block;
     width: 100%;
-    height: 30px; /* Espessura da faixa vermelha */
+    height: 50px; /* Aumentada para combinar com o menu de cima! */
     background-color: #d10a10;
 }
 
@@ -97,51 +113,5 @@ footer {
     padding: 30px;
     font-size: 14px;
     color: #555555;
-}
-/* --- 3. BARRA VERMELHA (Menu Superior Ampliado) --- */
-header.barra-vermelha {
-    background-color: #d10a10;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-    /* Aumentei aqui! 35px em cima/baixo deixa a barra bem mais alta e robusta */
-    padding: 35px 5%; 
-    
-    /* Esse truque faz a barra jogar uma sombra por cima da imagem, dando o efeito de cobertura */
-    position: relative;
-    z-index: 10;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4); 
-}
-
-/* Deixando a logo do parque maior */
-header.barra-vermelha .logo h1 {
-    font-family: "Spicy Rice", serif;
-    color: #ffffff;
-    font-size: 36px; /* Aumentado */
-    font-weight: 400;
-}
-
-header.barra-vermelha nav ul {
-    display: flex;
-    list-style: none;
-    gap: 35px; /* Mais espaço entre os links */
-}
-
-/* Deixando os links do menu maiores e mais fáceis de clicar */
-header.barra-vermelha nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 18px; /* Aumentado */
-    text-transform: uppercase;
-    transition: transform 0.2s, color 0.2s;
-    display: inline-block;
-}
-
-/* Efeito extra: o link cresce um pouquinho de tamanho quando passa o mouse */
-header.barra-vermelha nav ul li a:hover {
-    color: #ffcccc;
-    transform: scale(1.1); 
 }
 
