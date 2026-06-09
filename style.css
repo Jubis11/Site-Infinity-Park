@@ -1,11 +1,147 @@
-/* Aplica Montserrat no site inteiro (textos, parágrafos, botões) */
-body {
-    font-family: "Montserrat", sans-serif;
+/* --- 1. RESET PADRÃO (Zera as margens do navegador) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Aplica Spicy Rice apenas nos títulos (h1, h2, h3...) */
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Spicy Rice", serif;
-    font-weight: 400; /* Peso padrão da Spicy Rice */
-    letter-spacing: 1px; /* Opcional: dá um espacinho estiloso entre as letras */
+/* --- 2. CONFIGURAÇÃO DO CORPO (Fundo Creme na Tela Toda) --- */
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #f6fcee; /* O fundo creme agora assume o site inteiro */
+    color: #000000;
+    min-height: 100vh;
 }
+
+/* --- 3. BARRA VERMELHA (Menu Superior) --- */
+header.barra-vermelha {
+    background-color: #d10a10; /* O vermelho do Figma */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%; /* Alinhado com as laterais da tela */
+}
+
+header.barra-vermelha .logo h1 {
+    font-family: "Spicy Rice", serif;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+header.barra-vermelha nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px; /* Espaço entre as opções do menu */
+}
+
+header.barra-vermelha nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase; /* Letras maiúsculas */
+    transition: color 0.2s;
+}
+
+header.barra-vermelha nav ul li a:hover {
+    color: #ffcccc; /* Cor ao passar o mouse */
+}
+
+/* --- 4. IMAGEM PRINCIPAL (Banner) --- */
+.banner-atracao {
+    width: 100%;
+}
+
+.img-principal {
+    width: 100%;
+    display: block; /* Remove espaços vazios abaixo da foto */
+}
+
+/* --- 5. SEÇÃO DE DESCRIÇÃO (Sobre o Parque) --- */
+.descricao-parque {
+    max-width: 1000px; /* Limita a largura do texto para não ficar esticado em telas gigantes */
+    margin: 0 auto; /* Centraliza o bloco de texto na tela */
+    padding: 60px 40px; /* Dá espaço para respirar nas bordas */
+    text-align: center; /* Centraliza os textos igual ao Figma */
+}
+
+.descricao-parque h2 {
+    font-family: "Spicy Rice", serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.descricao-parque p {
+    font-size: 18px;
+    color: #000000;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* --- 6. SEGUNDA BARRA VERMELHA DE DIVISÃO --- */
+/* Como tiramos as laterais, agora criamos uma barra vermelha de verdade para o final da seção */
+main::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 30px; /* Espessura da faixa vermelha */
+    background-color: #d10a10;
+}
+
+/* --- 7. RODAPÉ --- */
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+    color: #555555;
+}
+/* --- 3. BARRA VERMELHA (Menu Superior Ampliado) --- */
+header.barra-vermelha {
+    background-color: #d10a10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    /* Aumentei aqui! 35px em cima/baixo deixa a barra bem mais alta e robusta */
+    padding: 35px 5%; 
+    
+    /* Esse truque faz a barra jogar uma sombra por cima da imagem, dando o efeito de cobertura */
+    position: relative;
+    z-index: 10;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4); 
+}
+
+/* Deixando a logo do parque maior */
+header.barra-vermelha .logo h1 {
+    font-family: "Spicy Rice", serif;
+    color: #ffffff;
+    font-size: 36px; /* Aumentado */
+    font-weight: 400;
+}
+
+header.barra-vermelha nav ul {
+    display: flex;
+    list-style: none;
+    gap: 35px; /* Mais espaço entre os links */
+}
+
+/* Deixando os links do menu maiores e mais fáceis de clicar */
+header.barra-vermelha nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px; /* Aumentado */
+    text-transform: uppercase;
+    transition: transform 0.2s, color 0.2s;
+    display: inline-block;
+}
+
+/* Efeito extra: o link cresce um pouquinho de tamanho quando passa o mouse */
+header.barra-vermelha nav ul li a:hover {
+    color: #ffcccc;
+    transform: scale(1.1); 
+}
+
