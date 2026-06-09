@@ -1,11 +1,134 @@
-/* Aplica Montserrat no site inteiro (textos, parágrafos, botões) */
-body {
-    font-family: "Montserrat", sans-serif;
+/* Limpa as margens padrão do navegador */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-/* Aplica Spicy Rice apenas nos títulos (h1, h2, h3...) */
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Spicy Rice", serif;
-    font-weight: 400; /* Peso padrão da Spicy Rice */
-    letter-spacing: 1px; /* Opcional: dá um espacinho estiloso entre as letras */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fcfdfc;
+    color: #333333;
+    
+    /* COMANDOS DE FORÇA PARA CENTRALIZAR TUDO NO MEIO DA TELA */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow-x: hidden; /* Evita que o site quebre para os lados */
+}
+
+/* MENU VERMELHO DO TOPO */
+.menu-topo {
+    width: 100%;
+    background-color: #cc0000;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.menu-topo nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+/* IMAGENS DO BANNER E DO RODAPÉ */
+.banner-principal, .rodape {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+}
+
+.banner-principal img, 
+.rodape img {
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: cover;
+    display: block;
+}
+
+/* BLOCOS DE TEXTO CENTRALIZADOS */
+.introducao, .guia-seguranca {
+    width: 100%;
+    max-width: 800px; /* Prende o texto no meio igual ao Figma */
+    padding: 50px 20px;
+    text-align: center;
+    margin: 0 auto; /* Garante a centralização lateral */
+}
+
+.introducao h1 {
+    color: #cc0000;
+    font-size: 36px; /* Letras grandes */
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.introducao p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555555;
+}
+
+.guia-seguranca h2 {
+    font-size: 28px;
+    color: #222222;
+    margin-bottom: 40px;
+}
+
+/* CARDS DO GUIA DE SEGURANÇA */
+.card-seguranca {
+    background-color: #ffffff;
+    border: 2px solid #cc0000;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 0 auto 25px auto; /* Centraliza o card na tela */
+    max-width: 700px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left; /* O texto dentro do card fica alinhado à esquerda */
+}
+
+/* CÍRCULO COM O NÚMERO */
+.card-seguranca .numero {
+    background-color: #cc0000;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 22px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.card-seguranca h3 {
+    color: #cc0000;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.card-seguranca p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #656565;
+}
+
+/* RODAPÉ VERMELHO */
+.rodape {
+    background-color: #cc0000;
+    color: #ffffff;
+    padding-top: 40px;
+    width: 100%;
+}
+
+.rodape h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
 }
