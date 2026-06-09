@@ -1,4 +1,5 @@
 /* --- 1. RESET PADRÃO (Zera as margens do navegador) --- */
+/* --- 1. RESET PADRÃO (Zera as margens do navegador) --- */
 * {
     margin: 0;
     padding: 0;
@@ -20,32 +21,32 @@ header.barra-vermelha {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 35px 5%; /* Barra mais alta e robusta */
+    padding: 15px 5%; /* Barra elegante e ajustada */
     position: relative;
     z-index: 10;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4); /* Sombra por cima da imagem */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); /* Sombra suave por cima da imagem */
 }
 
-/* Logo do parque maior */
+/* Logo do parque */
 header.barra-vermelha .logo h1 {
     font-family: "Spicy Rice", serif;
     color: #ffffff;
-    font-size: 36px; 
+    font-size: 32px; 
     font-weight: 400;
 }
 
 header.barra-vermelha nav ul {
     display: flex;
     list-style: none;
-    gap: 35px; /* Espaço confortável entre as opções do menu */
+    gap: 30px; /* Espaço confortável entre as opções do menu */
 }
 
-/* Links do menu maiores e destacados */
+/* Links do menu */
 header.barra-vermelha nav ul li a {
     color: #ffffff;
     text-decoration: none;
     font-weight: 700;
-    font-size: 18px; 
+    font-size: 16px; 
     text-transform: uppercase; /* Letras maiúsculas */
     transition: transform 0.2s, color 0.2s;
     display: inline-block;
@@ -54,7 +55,7 @@ header.barra-vermelha nav ul li a {
 /* Efeito ao passar o mouse */
 header.barra-vermelha nav ul li a:hover {
     color: #ffcccc; 
-    transform: scale(1.1); /* O link cresce um pouquinho */
+    transform: scale(1.05); /* O link cresce sutilmente */
 }
 
 /* --- 4. IMAGEM PRINCIPAL (Banner Controlado) --- */
@@ -110,22 +111,7 @@ header.barra-vermelha nav ul li a:hover {
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    
-    height: 15px; /* Reduzido de 50px para 15px para ficar bem mais fina! */
-    background-color: #d10a10;
-}
-
-/* Faixa vermelha horizontal automática no final da tag main */
-main::after {
-    content: "";
-    display: block;
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    height: 50px;
+    height: 15px; /* Fina e discreta como no print */
     background-color: #d10a10;
 }
 
@@ -176,32 +162,11 @@ main::after {
 .card-regras {
     background-color: #dddddd; /* Tom de cinza claro do Figma */
     padding: 25px 30px;
-    border-radius: 30px; /* Bordas bem arredondadas como no seu design */
-    width: 100%;
-    max-width: 650px; /* Controla a largura do card */
 }
-
-/* Título em vermelho dentro do card */
-.card-regras h3 {
-    color: #d10a10;
-    font-family: "Montserrat", sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-/* Texto descritivo dentro do card */
-.card-regras p {
-    color: #333333;
-    font-size: 16px;
-    line-height: 1.5;
-    font-weight: 500;
-}
-
-/* --- 8. RODAPÉ --- */
-footer {
-    text-align: center;
-    padding: 30px;
-    font-size: 14px;
-    color: #555555;
+.banner-roda-gigante {
+    /* O CSS linka o HTML com a foto da pasta img */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('img/roda-gigante.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    /* ... outros estilos ... */
 }
