@@ -1,0 +1,11 @@
+/* Aplica Montserrat no site inteiro (textos, parágrafos, botões) */
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Aplica Spicy Rice apenas nos títulos (h1, h2, h3...) */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Spicy Rice", serif;
+    font-weight: 400; /* Peso padrão da Spicy Rice */
+    letter-spacing: 1px; /* Opcional: dá um espacinho estiloso entre as letras */
+}
