@@ -1,0 +1,127 @@
+/* RESET E FONTES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* MENU PRINCIPAL (PADRÃO FIGMA) */
+.menu-principal {
+    background-color: #CD0606;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    border-bottom: 5px solid #ffffff;
+}
+
+.logo {
+    font-family: 'Fredoka', sans-serif;
+    color: #ffffff;
+    font-size: 26px;
+}
+
+.links-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+    margin-left: 20px;
+}
+
+.links-menu a.active {
+    text-decoration: underline;
+}
+
+/* ESTRUTURA DA PÁGINA */
+.conteudo-pag-atracoes {
+    padding: 10px 0;
+}
+
+/* FAIXAS DE TÍTULO COLORIDAS */
+.faixa-titulo {
+    width: 90%;
+    margin: 20px auto;
+    padding: 12px;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 20px;
+    border-radius: 8px;
+    border: 1px solid #000; /* Bordinha preta do Figma */
+}
+
+.adrenalina { background-color: #FF8A00; } /* Laranja */
+.aquatica   { background-color: #008C9E; } /* Azul turquesa */
+.familia    { background-color: #003366; } /* Azul marinho */
+
+/* CARDS DAS ATRAÇÕES */
+.lista-cards {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #FFFDE7; /* Amarelo creme exato */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    border: 1px solid #000; /* Borda preta fina */
+    border-radius: 15px;
+    overflow: hidden;
+    height: 140px;
+}
+
+.card img {
+    width: 180px;
+    height: 100%;
+    object-fit: cover;
+    border-right: 1px solid #000;
+}
+
+/* Inverter borda da imagem quando ela estiver na direita */
+.card img:last-child {
+    border-right: none;
+    border-left: 1px solid #000;
+}
+
+.texto-card {
+    padding: 15px;
+    flex: 1;
+}
+
+.texto-card h3 {
+    color: #CD0606; /* Vermelho dos títulos */
+    font-family: 'Fredoka', sans-serif;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.texto-card p {
+    font-size: 13px;
+    color: #333;
+    line-height: 1.4;
+}
+
+/* ESTILO ESPECIAL PARA MANUTENÇÃO */
+.manutencao-interna {
+    opacity: 0.7;
+}
+
+/* BANNER DE RODAPÉ (ROSA/MAGENTA) */
+.banner-final {
+    background-color: #D81B60; /* Cor magenta do print */
+    color: #ffffff;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 22px;
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+    border-top: 1px solid #000;
+}
