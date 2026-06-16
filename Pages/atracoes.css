@@ -1,60 +1,64 @@
-/* ==========================================================================
-   ESTILO DA BARRA DE NAVEGAÇÃO (HEADER & NAV)
-   ========================================================================== */
-
-/* Remove as margens do navegador para a barra colar no topo e nas pontas */
+/* --- 1. RESET PADRÃO (Zera as margens do navegador e impede folgas) --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- 2. CONFIGURAÇÃO DO CORPO (Fundo Creme na Tela Toda) --- */
 body {
     font-family: "Montserrat", sans-serif;
     background-color: #f6fcee; /* O fundo creme assume o site inteiro */
     color: #000000;
     min-height: 100vh;
-    overflow-x: hidden; /* Evita barra de rolagem lateral por causa das divisórias de 100vw */
+    overflow-x: hidden; /* Evita barra de rolagem lateral */
 }
-/* Configuração da barra principal (fundo vermelho e alinhamento) */
-.barra-vermelha {
-    background-color: #cc0000; /* Vermelho padrão Infinity Park */
+
+/* --- 3. BARRA VERMELHA AMPLIADA (Menu Superior) --- */
+header.barra-vermelha {
+    background-color: #d10a10; /* O vermelho do Figma */
     display: flex;
-    justify-content: space-between; /* Logo na esquerda, menu na direita */
-    align-items: center; /* Alinha os itens no meio da barra (vertical) */
-    padding: 15px 5%; /* Espaço interno para não colar nas bordas da tela */
-    font-family: 'Arial', sans-serif;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve embaixo da barra */
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%; /* Barra elegante e ajustada */
+    position: relative;
+    z-index: 10;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); /* Sombra suave por cima da imagem */
 }
 
-/* Estilo do título / Logo */
-.logo h1 {
-    color: #ffffff; /* Letra branca */
-    font-size: 24px;
-    font-weight: bold;
-    text-transform: uppercase; /* Deixa em MAIÚSCULO */
-    letter-spacing: 1px;
+/* Logo do parque */
+header.barra-vermelha .logo h1 {
+    font-family: "Spicy Rice", serif;
+    color: #ffffff;
+    font-size: 32px; 
+    font-weight: 400;
 }
 
-/* Estrutura da lista do menu */
-.barra-vermelha nav ul {
-    list-style: none; /* Remove as bolinhas pretas da lista */
-    display: flex; /* Coloca os links um ao lado do outro em linha */
-    gap: 25px; /* Espaço igual entre cada botão do menu */
+header.barra-vermelha nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px; /* Espaço confortável entre as opções do menu */
 }
 
-/* Estilo dos links de texto (Home, Atrações, etc) */
-.barra-vermelha nav ul li a {
-    color: #ffffff; /* Texto branco */
-    text-decoration: none; /* Remove o sublinhado dos links */
-    font-size: 16px;
-    font-weight: 600;
-    padding: 8px 12px;
-    border-radius: 4px; /* Cantos levemente arredondados */
-    transition: all 0.3s ease; /* Faz o efeito do mouse mudar de cor suavemente */
+/* Links do menu */
+header.barra-vermelha nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px; 
+    text-transform: uppercase; /* Letras maiúsculas */
+    transition: transform 0.2s, color 0.2s;
+    display: inline-block;
 }
 
-/* Efeito Hover: Quando o usuário passa o mouse por cima do link */
-.barra-vermelha nav ul li a:hover {
-    color: #ffe6e6; /* O texto muda para um rosa bem clarinho */
-    background-color: rgba(255, 255, 255, 0.15); /* Cria um fundo iluminado atrás do link */
+/* Efeito ao passar o mouse */
+header.barra-vermelha nav ul li a:hover {
+    color: #ffcccc; 
+    transform: scale(1.05); /* O link cresce sutilmente */
 }
